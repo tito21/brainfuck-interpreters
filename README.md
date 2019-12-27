@@ -8,11 +8,20 @@ interpreters in varios languages.
 ## C
 
   - Fixed stack size with no stack overflow
-  - Use `make` to compile and `make debug` to compile printing usefull
-    information for debugging. 
+  - Can read from `stdin` or a file
+  - Use `make` to compile and `make debug` to compile printing useful
+    information for debugging.
+
+## Python
+
+  - Usage:
+    `./brainfuck.py filename [-d -s stack_size]`
+  - If no stack size is provided a dynamically expanding one is used.
+  - `-d` flag toggles printing debug information
+  - Can read from `stdin` or a file
 
 # Planed
 
-  - Python
+  - ✔Python
   - Lisp
   - Haskell
