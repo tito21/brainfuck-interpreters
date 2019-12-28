@@ -28,6 +28,7 @@ typedef enum
 #define HALT 4
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 
@@ -43,10 +44,11 @@ void printStack(char* stack, const size_t n)
 void dispState(char* stack, const size_t n, int pointer) {
     printf("\nStack state:\n");
     printStack(stack, STACKWIDTH);
-    // char str_pointer[STACKWIDTH*5];
-    // memset(str_pointer, ' ', NELEMS(str_pointer));
-    // str_pointer[(pointer*4)] = '^';
-    printf("%d\n", pointer);
+    char * str_pointer = malloc(3*pointer*sizeof(char));
+    memset(str_pointer, ' ', 3*pointer*sizeof(char));
+    str_pointer[3*pointer] = '^';
+    printf(" %s", str_pointer);
+    printf("\nPointer at: %d\n", pointer);
 }
 
 unsigned int matchLoop(char* code, unsigned int inst) {

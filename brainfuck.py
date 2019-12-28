@@ -29,7 +29,7 @@ class BrainFuckInter():
         }
 
     def resize(self):
-        print(self.pointer, len(self.stack), self.pointer - len(self.stack))
+        # print(self.pointer, len(self.stack), self.pointer - len(self.stack))
         if self.pointer > len(self.stack)-1:
             self.stack += [0 for _ in range(self.pointer - len(self.stack) + 2)]
 
@@ -75,8 +75,12 @@ class BrainFuckInter():
         return self.inst[inst]()
 
     def __repr__(self):
+        stack = ""
+        for s in self.stack:
+            stack += "{:3d}, ".format(s)
         stack = '\n' + str(self.stack) + '\n' \
-            +  " " + "   "*self.pointer  + '^'
+            + ' ' + "   "*self.pointer  + "^\n" \
+            + "Pointer at: {}".format(self.pointer)
         return stack
 
 
@@ -127,7 +131,7 @@ if __name__ == "__main__":
     S = 0
     if "-s" in sys.argv:
         S = int(sys.argv[sys.argv.index("-s")+1])
-        
+
     code = getCode(fp)
     fp.close()
     s = ""
