@@ -1,3 +1,5 @@
+// Copyright (C) 2019  Alberto Di Biase
+
 #define NELEMS(x) (sizeof(x) / sizeof((x)[0]))
 
 #ifndef VERBOSE

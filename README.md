@@ -25,3 +25,11 @@ interpreters in varios languages.
   - ✔Python
   - Lisp
   - Haskell
+  - Rust
+  - Go
+
+---
+
+# License
+
+All the code is under the [GPLv3 licence](https://www.gnu.org/licenses/)

@@ -1,5 +1,7 @@
 #! /usr/bin/python3
 
+# Copyright (C) 2019  Alberto Di Biase
+
 import sys
 
 JUMP = 1
