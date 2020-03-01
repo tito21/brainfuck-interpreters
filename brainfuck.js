@@ -1,3 +1,4 @@
+// Copyright (C) 2019  Alberto Di Biase
 
 class Instruction {
     constructor(inst, jmp_pos) {
