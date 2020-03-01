@@ -1,5 +1,5 @@
 brainfuck: brainfuck.c
-	gcc brainfuck.c -o brainfuck
+	gcc brainfuck.c -o brainfuck -O3
 
 debug: brainfuck.c
 	gcc brainfuck.c -o brainfuck -DVERBOSE=1
