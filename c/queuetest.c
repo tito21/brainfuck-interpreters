@@ -4,15 +4,18 @@
 int main(int argc, char const *argv[])
 {
     Node *list = newEmptyQueue();
-    int diez = 62;
-    int veinte = 20;
+    int* diez = malloc(sizeof(int));
+    *diez = 10;
+    int* veinte = malloc(sizeof(int));
+    *veinte = 20;
     printf("%p\n", list->next);
-    list->value = &diez;
+    list->value = diez;
     dispList(list);
 
-    appendQueue(list, &veinte);
-    int cuarenta = 40;
-    appendQueue(list, &cuarenta);
+    appendQueue(list, veinte);
+    int* cuarenta = malloc(sizeof(int));
+    *cuarenta = 40;
+    appendQueue(list, cuarenta);
     dispList(list);
 
     popQueue(list);
@@ -20,7 +23,8 @@ int main(int argc, char const *argv[])
     dispList(list);
 
     printf("%p\n", list);
-    list = pushQueue(list, &cuarenta);
+    list = pushQueue(list, cuarenta);
+    list = pushQueue(list, veinte);
     printf("%p\n", list);
     printf("%p\n", list->next);
     printf("Last %d\n", *(int *)lastElementQueue(list));
