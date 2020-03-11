@@ -4,54 +4,55 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Nodes {
-    void *value;
-    struct Node *next;
-
-} Node;
 /** Node: represents an element and a pointer to the next element in the list.
  * The queue argument in all this function (and the one returned) always points
  * to the first element.
  *
  * */
+typedef struct {
+    void *value;
+    struct Node *next;
+
+} Node;
+
 
 Node *newEmptyQueue();
 
-Node *appendQueue(Node* queue, void* value);
 /** Add element to the end of the list */
+Node *appendQueue(Node* queue, void* value);
 
-Node *popQueue(Node* queue);
 /** Remove last element of the list */
+Node *popQueue(Node* queue);
 
-Node *pushQueue(Node* queue, void* value);
 /** Add element to the start of the list */
+Node *pushQueue(Node* queue, void* value);
 
-Node *shiftQueue(Node* queue);
 /** Remove first element of the list */
+Node *shiftQueue(Node* queue);
 
-void freeQueue(Node* queue);
 /** Free memory */
+void freeQueue(Node* queue);
 
-unsigned int lengthQueue(Node* queue);
 /** Returns the length of the list */
+unsigned int lengthQueue(Node* queue);
 
-void *nthElementQueue(Node *queue, unsigned int n);
 /** Returns the nth element */
+void *nthElementQueue(Node *queue, unsigned int n);
 
-Node *_nthNode(Node *queue, unsigned int n);
 /** Returns the nth node */
+Node *_nthNode(Node *queue, unsigned int n);
 
-Node *_lastNode(Node *queue);
 /** Returns the last node */
+Node *_lastNode(Node *queue);
 
-void *firstElementQueue(Node* queue);
 /** Returns the first element of the list */
+void *firstElementQueue(Node* queue);
 
-void *lastElementQueue(Node* queue);
 /** Returns the last element of the list */
+void *lastElementQueue(Node* queue);
 
-void dispList(Node* queue);
 /** Prints the values of the list */
+void dispList(Node* queue);
 
 
 #endif

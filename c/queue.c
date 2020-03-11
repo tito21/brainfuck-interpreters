@@ -28,6 +28,7 @@ Node * popQueue(Node* queue) {
         prev = curr;
         curr = curr->next;
     }
+    free(curr->value);
     free(curr);
     prev->next = NULL;
 
@@ -47,6 +48,7 @@ Node *pushQueue(Node* queue, void* value) {
 Node *shiftQueue(Node* queue) {
     /** Remove first element of the list */
     Node *new_first = queue->next;
+    free(queue->value);
     free(queue);
     return new_first;
 }
@@ -54,11 +56,17 @@ Node *shiftQueue(Node* queue) {
 void freeQueue(Node* queue) {
     /** Free memory */
     // Node *queue = queue;
-    while(queue->next) {
+    if (! queue->next) {
+        free(queue->value);
+        return;
+    }
+    do {
+        free(queue->value);
         free(queue);
         queue = queue->next;
-    }
-    free(queue);
+    } while (queue->next);
+    // free(queue->value);
+    // free(queue);
 }
 
 unsigned int lengthQueue(Node* queue) {
