@@ -1,5 +1,7 @@
 
 .vscode
 
-brainfuck
-brainfuck.exe
+
+c/brainfuck
+c/queuetest
+c/brainfuck.exe

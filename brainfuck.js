@@ -1,4 +1,4 @@
-// Copyright (C) 2019  Alberto Di Biase
+// Copyright (C) 2020  Alberto Di Biase
 
 class Instruction {
     constructor(inst, jmp_pos) {
