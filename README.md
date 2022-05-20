@@ -35,6 +35,13 @@ interpreters in various languages.
   - Very similar to the javascript code.
   - Mandelbrot time 1m48,398s
 
+## Julia
+
+  - Usage `julia brainfuck.jl filename`
+  - Uses a transcomilation step similar to the javascript implementation
+  - Mandelbrot time 0m54,092s, after some optimization does deliver. I might
+  start using it for my own programas
+
 # Planed
 
   - ✔Python
