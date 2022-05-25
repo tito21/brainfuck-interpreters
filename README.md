@@ -40,14 +40,19 @@ interpreters in various languages.
   - Usage `julia brainfuck.jl filename`
   - Uses a transcomilation step similar to the javascript implementation
   - Mandelbrot time 0m54,092s, after some optimization does deliver. I might
-  start using it for my own programas
+  start using it for my own programs
+
+## Rust
+  - Usage `rustc brainfuck.rs -C opt-level=3` and then `./brainfuck filename`.
+  - As usal uses a transcompilation step similar to the other implementations.
+  - Mandelbrot time 0m34,147s
 
 # Planed
 
   - ✔Python
   - Lisp
   - Haskell
-  - Rust
+  - ✔Rust
   - ✔Go
 
 ---
